@@ -1,0 +1,25 @@
+def longest_consecutive_character(sequence):
+    max_count = 0
+    max_character = ''
+    previous_character = ''
+    current_counter = 0
+    dictionary = {}
+    for i in sequence:
+        if i == previous_character:
+            current_counter += 1
+        else:
+            previous_character = i
+            current_counter = 1
+        if max_count < current_counter:
+            dictionary[previous_character] = current_counter
+            max_count = current_counter
+            max_character = previous_character
+        elif max_count == current_counter:
+            dictionary[previous_character] = current_counter
+
+    return dictionary
+
+
+if __name__ == '__main__':
+    dictionary = longest_consecutive_character("ABABACABABCBC")
+    print(dictionary)

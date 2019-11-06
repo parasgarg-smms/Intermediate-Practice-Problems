@@ -1,0 +1,1 @@
+["b'https://www.mydomaincontact.com/index.php?domain_name=uej.com'", "b'javascript:void(0);'"]
